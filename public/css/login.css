@@ -1,0 +1,21 @@
+.wrapper-login {
+  background: linear-gradient(to right, #2193b0, #6dd5ed);
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  padding: 100px 40px;
+  border-radius: 5px;
+}
+
+.login-form h3 {
+  padding-bottom: 20px;
+  text-align: center;
+}
