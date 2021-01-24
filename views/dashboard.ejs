@@ -29,7 +29,7 @@
   </nav>
   <div class="container">
     <div class="row">
-      <div class="progress-bar-car">
+      <div class="progress-bar-car" id="progress-bar-car">
         <div class="anchors">
           <div class="anchor" id="anchor-a">A</div>
           <div class="anchor" id="anchor-b">B</div>
@@ -54,8 +54,8 @@
                 <div class="col-8">
                   Quảng đường đi được:
                 </div>
-                <div class="col-4">
-                  <%= progress %>%
+                <div class="col-4" id="progress">
+                  <%= progress %> %
                 </div>
               </div>
             </li>
@@ -65,7 +65,7 @@
                   Chuyển hướng xe:
                 </div>
                 <div class="col-4">
-                  <button type="button" class="btn btn-primary">Chuyển hướng</button>
+                  <button type="button" class="btn btn-primary" onclick="onClickGoBack()">Chuyển hướng</button>
                 </div>
               </div>
             </li>
@@ -75,7 +75,7 @@
                   Chạy xe:
                 </div>
                 <div class="col-4">
-                  <button type="button" class="btn btn-success">Chạy xe</button>
+                  <button type="button" class="btn btn-success" onclick="onClickStart()">Chạy xe</button>
                 </div>
               </div>
             </li>
@@ -85,7 +85,7 @@
                   Dừng xe:
                 </div>
                 <div class="col-4">
-                  <button type="button" class="btn btn-danger">Dừng xe</button>
+                  <button type="button" class="btn btn-danger" onclick="onClickStop()">Dừng xe</button>
                 </div>
               </div>
             </li>
@@ -97,8 +97,11 @@
 
 
   <script>
-    const progress = <%= progress %>
+    var progress = <%= progress %>
+    var isStart = <%= isStart %>
+    var goForward = <%= goForward %>
   </script>
+  <script src="/socket.io/socket.io.js"></script>
   <script src="http://localhost:3000/static/js/dashboard.js"></script>
 </body>
 
